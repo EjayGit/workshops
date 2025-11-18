@@ -1,0 +1,43 @@
+/* when you select an html element, the styles apply to that element and all of its children. */
+
+body{
+    background-color: peru;
+}
+
+article{
+    background: thistle;
+    color: brown;
+}
+
+article h1, h3, h4 {
+    text-shadow: 1px 2px grey;
+}
+
+img{
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    border: 4px double whitesmoke;
+}
+
+p{
+    color: blue;
+}
+
+.firstPara{
+    font-weight: bolder;
+}
+
+#p2{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button{
+    background-color: blue;
+    color:whitesmoke;
+    width: 60px;
+    height: 30px;
+    font-size: large;
+    border-radius: 8px;
+    border: 4px ridge whitesmoke;
+}
