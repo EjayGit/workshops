@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+}
+
+.image-container{
+    background: #eee;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    top:1000px;
+    left:100px;
+}
+
+img{
+    width:300px;
+    height: auto;
+}
+
+h2 {
+    color: white;
+    font-size: 32px;
+    padding: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.cookie-notice {
+    background: #eee;
+    padding: 20px;
+    position: fixed;
+    bottom: 0px;
+    left:0px;
+    right: 0px;
+}

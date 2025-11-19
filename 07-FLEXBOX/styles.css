@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightgray;
+}
+
+img{
+    width: 100px;
+    height: auto;
+    margin: 10px;
+    border-radius: 50%;
+    border: 2px ridge gray
+}
+
+nav{
+    display: flex;
+    gap: 20px;
+}
+
+button{
+    padding: 10px 20px;
+    border: none;
+    background-color: teal;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
