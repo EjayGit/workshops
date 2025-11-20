@@ -1,23 +1,5 @@
-const myFirstName = "John";
-const mySurname = "Doe";
-let myAge = 21;
-const myYearOfBirth = 2005;
-let myCityOfResidence = "London";
+let currentStatus = ["old","was"];
 
-console.log(myFirstName);
-console.log(mySurname);
-console.log(myAge);
-console.log(myYearOfBirth);
-console.log(myCityOfResidence);
-
-let numOne = 5;
-let numTwo = 10;
-
-let sum = numOne + numTwo;
-
-console.log("Sum: " + sum);
-
-console.log(`My name is ${myFirstName} ${mySurname}, I am ${myAge} years old, I was born in ${myYearOfBirth} and I live in ${myCityOfResidence}.`);
-
-numOne = 10;
-numTwo = 5;
+for (let i=1; i < 11; i++) {
+    console.log(`My ${currentStatus[0]} favourite number ${currentStatus[1]} ${i}`);
+}
