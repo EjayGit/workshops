@@ -15,4 +15,8 @@ function convertDistance(miles, convertTo){
     }kilometers = miles * 1.60934;
 }
 
-console.log(convertDistance(10, 'miles'))
+let distance = prompt("Enter the distance in miles:");
+console.log(typeof distance);
+let units = prompt("Enter the unit to convert to (kilometers or miles):");
+console.log(typeof units);
+console.log(convertDistance(distance, units))
