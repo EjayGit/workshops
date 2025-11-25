@@ -5,6 +5,8 @@
 }
 
 body{
+    margin:5px;
+    text-align: center;
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 1fr 5fr 1fr
@@ -40,6 +42,39 @@ article{
     grid-row-start: 3;
     grid-row-end: 7;
     background-color: lightgreen;
+    display: grid;
+    grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+article h1{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+article .imgDiv{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr ;
+}
+
+/* img{
+    This is simulated img css grid-column-start etc for all of them with some differences incorporated... but without actually doing it as it will take an age.
+} */
+
+article p{
+    grid-column-start:2;
+    grid-column-end:2;
+    grid-row-start:2;
+    grid-row-end:3;
+    text-align: justify;
+    padding: 5px;;
 }
 
 footer{
@@ -48,4 +83,9 @@ footer{
     grid-row-start: 6;
     grid-row-end: 7;
     background-color: beige;
+}
+
+img{
+    width: 50px;
+    height: auto;
 }

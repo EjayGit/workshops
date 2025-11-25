@@ -41,7 +41,7 @@ favColours.forEach((colour) => {console.log(colour);})
 // TODO: Challenge 3
 favNumbers = [3, 7, 2, 9, 4, Infinity];
 i = 0;
-while(i <= favNumbers.length){
+while(i < favNumbers.length){
     console.log(favNumbers[i]);
     i++;
 }
