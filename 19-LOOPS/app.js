@@ -1,3 +1,4 @@
+let i = 0;
 for (let i = 0 ; i < 5 ; i++) {
     console.log(`Iteration`, i);
 };
@@ -10,7 +11,7 @@ while (counter <= 5){
 
 
 let condition = Math.random();
-let i = 0;
+i = 0;
 console.log(i);
 while (condition > 0.1){
     i++
