@@ -29,26 +29,28 @@ aside{
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start:2;
-    grid-row-end:6;
+    grid-row-end:7;
     background-color:plum;
 }
 
 nav{
     grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-end: -1;
     grid-row-start: 2;
-    grid-row-end: 2;
+    grid-row-end: 3;
     background-color: lightblue;
 }
 
 article{
     grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-end: -1;
     grid-row-start: 3;
     grid-row-end: 7;
     background-color: lightgreen;
     display: grid;
-    grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr;
+    padding:20px;
+
+    grid-template-rows: repeat(4,0.25fr);
     grid-template-columns: 1fr 1fr;
 }
 
@@ -56,7 +58,7 @@ article h1{
     grid-column-start: 1;
     grid-column-end: -1;
     grid-row-start: 1;
-    grid-row-end: 1;
+    grid-row-end: 2;
 }
 
 article .imgDiv{
