@@ -13,7 +13,11 @@ intro-text{
     margin-inline:auto;
 }
 
-.container{
+header{
+    display: flex;
+}
+
+.flexContainer{
     background: #eee;
     display: flex;
     flex-wrap: wrap;
@@ -25,7 +29,7 @@ intro-text{
     border: 2px solid goldenrod;
     border-radius: 1rem;
     min-height: 50px;
-    min-width: 50px;
+    max-width: fit-content;
 }
 
 img{
@@ -36,3 +40,32 @@ img{
     border-radius: 1rem;
 }
 
+.hero{
+    background-image: url(./images/cat.jpg);
+    width: 100vw;
+    height:100vh;
+}
+
+.transbox{
+    background-color: rgba(255, 255, 255, 0.678);
+    width: 100vw;
+    height: 100vh;
+}
+
+.gridContainer{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    gap: 10px;
+}
+
+@media (min-width: 460px){
+    header{
+        justify-content: center;
+    }
+}
+
+@media (min-width: 800px){
+    header{
+        justify-content:left;
+    }
+}
