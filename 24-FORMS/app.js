@@ -4,14 +4,10 @@ userForm.addEventListener("submit", (event) => {
     const formData = new FormData(userForm);
     // console.log(formData);
     const userEntries = Object.fromEntries(formData);
-    const userDisplayName = document.createElement("h2");
-    const userDisplayCity = document.createElement("h2");
-    const userDisplayHobby = document.createElement("h2");
-    userDisplayName.innerText = userEntries.userName;
-    userDisplayCity.innerText = userEntries.city;
-    userDisplayHobby.innerText = userEntries.hobby;
-    document.body.appendChild(userDisplayName);
-    document.body.appendChild(userDisplayCity);
-    document.body.appendChild(userDisplayHobby);
+    const userDisplay = document.createElement("h2");
+    for (let i = 0 ; i < Object.keys(userEntries).length ; i++) {
+        userDisplay.innerText = `${Object.entries(userEntries)[i][0]}: ${Object.entries(userEntries)[i][1]}`;
+        document.body.appendChild(userDisplay.cloneNode(true));
+    };
 });
 
