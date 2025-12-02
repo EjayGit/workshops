@@ -31,7 +31,7 @@ console.log(theme);
 
 //=====================================
 // Remove item from local storage.
-//localStorage.removeItem("user preferences");
+localStorage.removeItem("user preferences");
 
 // remove all local storage
-//localStorage.clear();
+localStorage.clear();

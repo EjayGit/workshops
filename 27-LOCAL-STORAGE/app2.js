@@ -3,10 +3,14 @@ const form = document.querySelector('form');
 function savePreferences(e){
     e.preventDefault();
 
-    const formData = new FormData(form); const colour = formData.get("colour");
-
+    const formData = new FormData(form);
+    const colour = formData.get("colour");
+    const fontSize = formData.get('fontSize');
+    const url = formData.get('url');
     const preferences = {
         colour,
+        fontSize,
+        url,
     };
 
     localStorage.setItem('preferences', JSON.stringify(preferences));
@@ -17,19 +21,28 @@ form.addEventListener('submit', savePreferences);
 preferences2 = JSON.parse(localStorage.getItem('preferences'));
 
 if (preferences2){
-    const input = document.querySelector('input');
-    input.value = preferences2.colour;
+    const colourInput = document.getElementById('colour');
+    const fontInput = document.getElementById('fontSize');
+    const urlInput = document.getElementById('url');
+    colourInput.value = preferences2.colour;
+    fontInput.value = preferences2.fontSize;
+    urlInput.value = preferences2.url;
 }
 
 function loadPreferences(){
     const preferences3 = JSON.parse(localStorage.getItem('preferences'));
 
     if(preferences3){
-        const input = document.querySelector('input');
+        colourInput = document.getElementById('colour');
         input.value = preferences3.colour || "#000000";
-
         const body = document.querySelector('body');
         body.style.backgroundColor = preferences3.colour || "#000000";
+        fontInput = document.getElementById('fontSize');
+        input.value = preferences3.fontSize || "#000000";
+        const h1 = document.querySelector('h1');
+        h1.style.fontSize = preferences3.fontSize;
+        urlInput = document.getElementById('url');
+        input.value = preferences3.url || "#000000";
     }
 }
 
