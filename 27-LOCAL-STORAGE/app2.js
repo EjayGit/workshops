@@ -40,11 +40,10 @@ function loadPreferences(){
         const body = document.querySelector('body');
         body.style.backgroundColor = preferences3.colour || "#000000";
         fontInput = document.getElementById('fontSize');
-        input.value = preferences3.fontSize;
+        fontInput.value = preferences3.fontSize;
         const h1 = document.querySelector('h1');
         h1.style.fontSize = preferences3.fontSize;
-        urlInput = document.getElementById('url');
-        input.value = preferences3.url;
+        urlInput.value = preferences3.url;
     }
 }
 
