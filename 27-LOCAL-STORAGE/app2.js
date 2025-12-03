@@ -31,18 +31,20 @@ if (preferences2){
 
 function loadPreferences(){
     const preferences3 = JSON.parse(localStorage.getItem('preferences'));
+    
+    console.log("test");
 
     if(preferences3){
         colourInput = document.getElementById('colour');
-        input.value = preferences3.colour || "#000000";
+        colourInput.value = preferences3.colour || "#000000";
         const body = document.querySelector('body');
         body.style.backgroundColor = preferences3.colour || "#000000";
         fontInput = document.getElementById('fontSize');
-        input.value = preferences3.fontSize || "#000000";
+        input.value = preferences3.fontSize;
         const h1 = document.querySelector('h1');
         h1.style.fontSize = preferences3.fontSize;
         urlInput = document.getElementById('url');
-        input.value = preferences3.url || "#000000";
+        input.value = preferences3.url;
     }
 }
 
