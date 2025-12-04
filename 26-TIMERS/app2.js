@@ -1,29 +1,38 @@
 console.log('Hello Universe');
 
 const startButton = document.getElementById("startBtn");
-const stopButton = document.getElementById("stopBtn")
+const stopButton = document.getElementById("stopBtn");
+const resetButton = document.getElementById('resetBtn');
 const secTimer = document.getElementById("seconds");
+
+let startInterval;
 
 function startStop(choice) {
     if (choice == 'start'){
-        const startInterval = setInterval(() => {
+        startInterval = setInterval(() => {
             secTimer.innerText = Number(secTimer.innerText) + 1;
         }, 1000);
     }else if (choice == 'stop'){
         clearInterval(startInterval);
-    } else{
-        console.log("Error at startStop else statement");
+    }else if (choice == 'reset'){
+        secTimer.innerHTML = '00';
     }
 };
 
 // if startbutton pressed - start interval timer.
-startButton.addEventListener('click', (e) => {
+startButton.addEventListener('click', () => {
     // start interval timer
     startStop('start');
 });
 
 // if stop button pressed, stop interval timer.
-stopButton.addEventListener("click", (e) => {
+stopButton.addEventListener("click", () => {
     // stop interval timer.
     startStop('stop');
+});
+
+// if reset button pressed, reset interval timer.
+resetButton.addEventListener("click", () => {
+    // stop interval timer.
+    startStop('reset');
 });
