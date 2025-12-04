@@ -9,13 +9,16 @@ let startInterval;
 
 function startStop(choice) {
     if (choice == 'start'){
-        startInterval = setInterval(() => {
-            secTimer.innerText = Number(secTimer.innerText) + 1;
-        }, 1000);
+        if (!startInterval) {
+            startInterval = setInterval(() => {
+                secTimer.innerText = Number(secTimer.innerText) + 1;
+            }, 1000);
+        }
     }else if (choice == 'stop'){
         clearInterval(startInterval);
     }else if (choice == 'reset'){
         secTimer.innerHTML = '00';
+        startInterval = null;
     }
 };
 
