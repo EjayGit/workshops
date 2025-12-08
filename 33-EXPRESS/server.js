@@ -29,3 +29,9 @@ app.get("/messages", (request, response) => {response.json({message: "Hello Univ
 app.use(express.json());
 
 app.get("/birds", (request, response) => {response.json(data)});
+
+app.post("/add", (request, response) => {
+  const numA = request.body.a;
+  const numB = request.body.b;
+  response.json(`${numA} + ${numB} = ${numA + numB}`);
+});
