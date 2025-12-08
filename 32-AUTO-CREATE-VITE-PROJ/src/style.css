@@ -1,0 +1,101 @@
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: peru;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+img{
+    width: 200px;
+    height: auto;
+}
+
+img:active{
+    scale: 1.05;
+}
+
+.rewardImage{
+    width:50px;
+    height:50px;
+}
+
+.rewardContainer{
+    border: 2px black ridge;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    background-color: rgb(175, 255, 228);
+    color: darkslategrey;
+}
+
+.rewardContainer:hover{
+    scale: 1.02;
+}
+
+.rewardContainer:active{
+    rotate: 3deg;
+}
+
+.itemContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#shopContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+#petContainer{
+    display: flex;
+    flex-direction: column;
+    border: 4px black ridge;
+    border-radius: 20px;
+    text-align: center;
+    font-family: cursive;
+    background-color: floralwhite;
+    color: darkslategrey;
+}
+
+.title{
+    font-size: 32px;
+}
+
+.rewardInstances{
+    font-size: 40px;
+    color: rgb(107, 107, 73);
+}
+
+#resetBtn{
+    margin: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: rgb(157, 205, 228);
+    color: rgb(43, 56, 56);
+    font-size: 16px;
+    border-radius: 15px;
+}
+
+.resetBtn:active{
+    scale: 1.1;
+}
+
+.rewardBtnCover{
+    width: 200px;
+    border-radius: 10px;
+    background-color: rgba(70, 70, 70, 0.5);
+}
