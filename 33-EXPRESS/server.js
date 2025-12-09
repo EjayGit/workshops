@@ -17,16 +17,13 @@ import express from "express";
 
 const app = express();
 
-app.listen(3000, function(){
-    console.log("Server is listening on port 3000");
-});
+app.use(express.json());
 
+app.listen(3000, ()=>{console.log("Server is listening on port 3000")});
 
 app.post("/messages", (request, response) => {response.json({message: "Hello World"})});
 
 app.get("/messages", (request, response) => {response.json({message: "Hello Universe"})});
-
-app.use(express.json());
 
 app.get("/birds", (request, response) => {response.json(data)});
 
