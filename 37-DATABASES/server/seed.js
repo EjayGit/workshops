@@ -20,6 +20,6 @@ db.query(
 db.query(
     `INSERT INTO messages (msg_name, content) VALUES ($1, $2)`, [
         "Does anyone else...",
-        "Love oranges?",
+        "Love oranges?"
     ]
 );

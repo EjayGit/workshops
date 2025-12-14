@@ -13,6 +13,3 @@ app.get(`/messages`, async (req, res) => {
     res.json(messages.rows);
 });
 
-app.post('./send', async (req, res) =>{
-    const send = ;
-});
