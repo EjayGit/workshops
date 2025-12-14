@@ -6,7 +6,6 @@ function eventHandler(event){
     
     const formData = new FormData(messageForm);
     const userInfo = formData.get("message");
-
     fetch('http://localhost:8080/message',{
         method: "POST",
         headers: {
