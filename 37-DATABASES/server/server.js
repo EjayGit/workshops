@@ -11,5 +11,13 @@ app.listen(8080, () => {
 app.get(`/messages`, async (req, res) => {
     const messages = await db.query(`SELECT * FROM messages`);
     res.json(messages.rows);
+    console.log(messages.rows);
 });
 
+app.post('/writeMessage', async (req, res) => {
+    const newMessage = req.body.message;
+    const query = db.query(
+        `INSERT INTO messages (message) VALUES ($1)`,
+        [newMessage]
+    );
+})
