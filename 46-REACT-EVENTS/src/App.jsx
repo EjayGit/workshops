@@ -32,24 +32,29 @@
 // }
 
 // Version 3
+// function App(){
+  
+//   function handleClick(username){
+//     console.log(`Hello ${username}`);
+//   }
+
+//   return (
+//     <>
+//       <h1>Greeting</h1>
+//       <button onClick={() => handleClick("Bertie")}>Greet Bertie!</button>
+
+//       <button
+//         onClick={function() {
+//           console.log("I was clicked!")
+//         }}
+//         >Normal!</button>
+//     </>
+//   )
+// }
+
+//************** */ Workshop *******************
 function App(){
   
-  function handleClick(username){
-    console.log(`Hello ${username}`);
-  }
-
-  return (
-    <>
-      <h1>Greeting</h1>
-      <button onClick={() => handleClick("Bertie")}>Greet Bertie!</button>
-
-      <button
-        onClick={function() {
-          console.log("I was clicked!")
-        }}
-        >Normal!</button>
-    </>
-  )
 }
 
 export default App
