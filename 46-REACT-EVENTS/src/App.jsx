@@ -54,7 +54,25 @@
 
 //************** */ Workshop *******************
 function App(){
-  
+
+    function clickHandler(){
+        console.log("Function activated!")
+    }
+
+    function clickHandler2(name){
+        console.log(name);
+    }
+
+    return(
+        <>
+            <button onClick={() => console.log("Button clicked!")}>Click me!</button>
+            <button onClick={() => console.log("Click me again button clicked!")}>Click me again!</button>
+            <button onClick={() => console.log("Again again button clicked!")}>Again again!!</button>
+
+            <button onClick={clickHandler}>Click me!</button>
+            <button onClick={() => clickHandler2('Universe')}>Click me for an input!</button>
+        </>
+    )
 }
 
 export default App
