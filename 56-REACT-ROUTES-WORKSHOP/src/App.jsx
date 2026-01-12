@@ -3,6 +3,9 @@ import AboutPage from './components/AboutPage'
 import HomePage from './components/HomePage'
 import NotFoundPage from './components/NotFoundPage'
 import NavigationBar from './components/NavigationBar'
+import UserProfile from './components/UserProfile'
+import Staff from './components/Staff'
+import StaffMember from './components/StaffMember'
 
 export default function App(){
   return (
@@ -15,6 +18,10 @@ export default function App(){
       <Routes>
         <Route path={'/'} element={<HomePage />} />
         <Route path={'/path'} element={<AboutPage />} />
+        <Route path={'/:userProfile'} element={<UserProfile/>} />
+        <Route path={'/staff'} element={<Staff/>}>
+          <Route path={':staffMember'} element={<StaffMember/>}/>
+        </Route>
         <Route path={'*'} element={<NotFoundPage />} />
       </Routes>
     </div>
