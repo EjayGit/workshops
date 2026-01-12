@@ -4,7 +4,8 @@ export default function NavigationBar(){
     return (
         <div className='navBar'>
             <p><Link to={'/'}>Home</Link> |&nbsp;
-            <Link to={'/about'}>About</Link></p>
+            <Link to={'/about'}>About</Link> |&nbsp;
+            <Link to={'/staff'}>Staff</Link></p>
         </div>
     )
 }
