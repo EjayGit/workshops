@@ -4,13 +4,13 @@ export default function FormValues(){
 
     const [formValues, setFormValues] = useState({
         name: "",
-        email: ""
+        email: "",
     });
 
     function inputChange(e){
         setFormValues({
-            ...FormValues,
-            [e.target.name]: e.target.value
+            ...formValues,
+            [e.target.name]: e.target.value,
         });
     }
 
