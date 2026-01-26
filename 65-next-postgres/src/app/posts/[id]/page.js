@@ -1,3 +1,15 @@
+export async function generateMetadata({params}){
+  const {id} = await params;
+  // const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`); // This is one example.
+  const res = await db.query(`SELECT * from posts WHERE id = $1`,[
+    id,
+  ])
+  const post = await res.json();
+  return {
+    title: post.title,
+  };
+}
+
 import {db} from '@/utils/dbConnection'
 
 export default async function Post({ params }) {
