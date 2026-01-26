@@ -6,6 +6,8 @@ import {
   SignInButton,
   SignUpButton,
 } from "@clerk/nextjs";
+import PopoverComponent from "./PopoverComponent";
+import SwitchComponent from "./SwitchComponent";
 
 export default function Header() {
   //when the user is signed in, they see the user button; when the user is signed out, they see the login buttons
@@ -18,6 +20,8 @@ export default function Header() {
       <SignedIn>
         <UserButton />
       </SignedIn>
+      <PopoverComponent/>
+      <SwitchComponent>Switch</SwitchComponent>
     </>
   );
 }
