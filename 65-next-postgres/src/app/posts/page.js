@@ -6,6 +6,9 @@ export const metadata = {
 import pg from 'pg'
 import myImage from '@/../public/cat.jpeg'
 import Image from "next/image"
+import TitleAnimation from '@/app/components/TitleAnimation'
+import {AnimateIn} from '@/app/components/AnimateIn'
+import ExitAnimation from '../components/ExitAnimation'
 
 
 export default async function PostsPage(){
@@ -16,6 +19,7 @@ export default async function PostsPage(){
     const posts = (await db.query('SELECT * FROM postworkshop')).rows;
 
     console.log(posts);
+    //throw new Error("I deliberately broke this page"); ///////////////////////////////////
 
     return (
         <div className='flex flex-col items-center'>
@@ -27,8 +31,12 @@ export default async function PostsPage(){
                     ))}
                 </ul>
             </div>
+            <TitleAnimation/>
+            <ExitAnimation/>
             <Image src={myImage} alt="cat image" height={200} width={"auto"} placeholder="blur" />
-            <Image src={'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.K89tEAe4xWnlr2Szk_IusAHaJQ%3Fpid%3DApi%26defcache%3D1&f=1&ipt=0490868f9b31604f4ade9a25599f1496ddcc9af3de752b548df8a06fe6265615&ipo=images'} alt='cat image' width={200} height={200}/>
+            <AnimateIn>
+                <Image src={'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.K89tEAe4xWnlr2Szk_IusAHaJQ%3Fpid%3DApi%26defcache%3D1&f=1&ipt=0490868f9b31604f4ade9a25599f1496ddcc9af3de752b548df8a06fe6265615&ipo=images'} alt='cat image' width={200} height={200}/>
+            </AnimateIn>
         </div>
     );
 }
