@@ -18,7 +18,7 @@ export default async function PostsPage(){
 
     const posts = (await db.query('SELECT * FROM postworkshop')).rows;
 
-    console.log(posts);
+    //console.log(posts);
     //throw new Error("I deliberately broke this page"); ///////////////////////////////////
 
     return (

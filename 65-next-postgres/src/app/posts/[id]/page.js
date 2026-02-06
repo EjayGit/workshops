@@ -16,7 +16,7 @@ import { notFound } from "next/navigation";
 export default async function Post({ params }) {
   const slug = await params;
 
-  const post = (await db.query(`SELECT * FROM posts WHERE id = ${slug.id};`)).rows;
+  const post = (await db.query(`SELECT * FROM postworkshop WHERE id = ${slug.id};`)).rows;
 
   if (post.length ==0){
     notFound()
